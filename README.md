@@ -1,1 +1,1 @@
-# P-Web
+# Diretório da disciplina Programação Web - 2023.2
