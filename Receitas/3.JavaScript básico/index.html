@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>   
+    <head>
+        <meta charset="UTF-8">     
+        <link href="estilo.css" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <div id="meu amor" class="hide"> Carregando cervejas...</div> 
+        <div><button id="botaoCarregar"> Carregar </button></div>            
+    </body>   
+
+    <script>
+        function carregarDiv(){
+            let div = document.getElementById("meu amor")   
+            div.classList.toggle('hide')
+            div.innerHTML = `<h1>Guinness</h1>`
+        }  
+
+        let botao = document.getElementById("botaoCarregar")
+        botao.addEventListener("click", carregarDiv)
+    </script>
+
+</html>
