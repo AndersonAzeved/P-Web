@@ -5,48 +5,48 @@ Esta página contem links para diversas "receitas de bolo" ao estilo dos livros 
 
 # Html, css e JavaScript
 
-*   html básico do básico do básico
+*   <a href="https://sites.google.com/view/fabricio10/p%C3%A1gina-inicial/cursos/pweb/html-b%C3%A1sico">html básico do básico do básico</a> - OK
 
-*   html com cascade style sheets, ou css
+*   <a href="https://sites.google.com/view/fabricio10/p%C3%A1gina-inicial/cursos/pweb/receita-html-css">html com cascade style sheets, ou css</a>- OK
 
-*   JavaScript básico, no navegador, com funções elementos DOM e eventos
+*   <a href="https://sites.google.com/view/fabricio10/p%C3%A1gina-inicial/cursos/pweb/receita-html-js1">JavaScript básico, no navegador, com funções elementos DOM e eventos</a>- OK
 
-*   Arrays JavaScript, com métodos map() e join() 
+*   <a href="https://sites.google.com/view/fabricio10/p%C3%A1gina-inicial/cursos/pweb/receita-html-js2">Arrays JavaScript, com métodos map() e join() </a>
 
-*   Arrow functions, callback functions e constantes 
+*   <a href="">Arrow functions, callback functions e constantes </a>
 
-*   Objetos JSON
+*   <a href="">Objetos JSON</a>
 
-*   Mais objetos JSON
+*   <a href="">Mais objetos JSON</a>
 
-*   Função fetch()
+*   <a href="">Função fetch()</a>
 
 # React "puro"
 
-*   Introdução ao React
+*   <a href="">Introdução ao React</a>
 
-*   Introdução ao JSX e componentes funcionais
+*   <a href="">Introdução ao JSX e componentes funcionais</a>
 
-*   Componentes React com classes e mais detalhes JSX
+*   <a href="">Componentes React com classes e mais detalhes JSX</a>
 
-*   Propriedades de componentes e desestruturação
+*   <a href="">Propriedades de componentes e desestruturação</a>
 
 # React com NextJS
 
-*   Sistemas web com nextjs, do zero
+*   <a href="">Sistemas web com nextjs, do zero</a>
 
-*   Páginas e componentes em aplicações nextjs
+*   <a href="">Páginas e componentes em aplicações nextjs</a>
 
-*   Interação com sistemas externos a partir do servidor, via função fetch() 
+*   <a href="">Interação com sistemas externos a partir do servidor, via função fetch() </a>
 
-*   Interação com sistemas externos a partir do navegador; método stale while revalidating
+*   <a href="">Interação com sistemas externos a partir do navegador; método stale while revalidating</a>
 
-*   Manutenção de estado de componentes; hooks useSWR e useState()
+*   <a href="">Manutenção de estado de componentes; hooks useSWR e useState()</a>
 
-*   Pesquisas a partir de formulários
+*   <a href="">Pesquisas a partir de formulários</a>
 
-*   Acesso a banco de dados relacionais I
+*   <a href="">Acesso a banco de dados relacionais I</a>
 
-*   Acesso a banco de dados relacionais II
+*   <a href="">Acesso a banco de dados relacionais II</a>
 
-*   <a href="https://github.com/AndersonAzeved/P-Web">Rotas dinâmicas e geração de conteúdo estático</a>
+*   <a href="">Rotas dinâmicas e geração de conteúdo estático</a>
