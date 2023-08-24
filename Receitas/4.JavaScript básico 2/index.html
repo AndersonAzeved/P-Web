@@ -11,6 +11,7 @@
         <div>
             <button id="botaoCarregar">Carregando cervejas...</button>
             <button id="botaoOrdenar">Mostrar cervejas ordenadas</button>
+            <button id="embaralhar">Embaralhar cervejas</button>
         </div>     
     </body>   
 
@@ -32,10 +33,19 @@
 
         function ordenarCervejas(){
             let ord = document.getElementById("meu amor")
-            let cervejasOrdenadas = cervejas.map(transformar).sort(() => Math.random() -0.5)
+            let cervejasOrdenadas = cervejas.map(transformar).sort()
             ord.innerHTML = `<table>
                                 <tr><th>Cervejas</th></tr>
                                 ${cervejasOrdenadas.join("\n")}
+                            </table>`
+        }
+
+        function embaralharCervejas(){
+            let emb = document.getElementById("meu amor")
+            let embCerv = cervejas.map(transformar).sort(() => Math.random() -0.5)
+            emb.innerHTML = `<table>
+                                <tr><th>Cervejas</th></tr>
+                                ${embCerv.join("\n")}
                             </table>`
         }
 
@@ -45,7 +55,8 @@
         let bOrdenar = document.getElementById("botaoOrdenar")
         bOrdenar.addEventListener("click", ordenarCervejas)
         
-        
+        let embaralhar = document.getElementById("embaralhar")
+        embaralhar.addEventListener("click", embaralharCervejas)
         
     </script>
 </html>

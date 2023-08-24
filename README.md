@@ -13,7 +13,7 @@ Esta página contem links para diversas "receitas de bolo" ao estilo dos livros 
 
 *   Arrays JavaScript, com métodos map() e join() ✅
 
-*   Arrow functions, callback functions e constantes 
+*   Arrow functions, callback functions e constantes ✅
 
 *   Objetos JSON
 
