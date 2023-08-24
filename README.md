@@ -1,4 +1,8 @@
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2572/2572499.png" type="image/png">
+<head>
+    <html>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2572/2572499.png" type="image/png">
+    </html>
+</head>
 
 # Programação Web - 2023.2
 
