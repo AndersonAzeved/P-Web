@@ -1,3 +1,5 @@
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2572/2572499.png" type="image/png">
+
 # Programação Web - 2023.2
 
 ## Html, css e JavaScript
