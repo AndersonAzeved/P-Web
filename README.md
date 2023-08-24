@@ -1,8 +1,5 @@
 # Programação Web - 2023.2
 
-## Programação Web com Node JS + Next JS + React
-Esta página contem links para diversas "receitas de bolo" ao estilo dos livros de programação da série "cookbook".
-
 ## Html, css e JavaScript
 
 *  <a target="_blank" href="Receitas/Html, css e JavaScript/1.HTML Básico"> html básico do básico do básico </a> ✅
