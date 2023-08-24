@@ -1,0 +1,13 @@
+.Transf{
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+th{
+    background-color: rgb(18, 196, 228);
+}
+
+table, th, td{
+    border: 1px solid black;
+    margin-left: 10px;
+}
