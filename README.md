@@ -15,11 +15,11 @@ Esta página contem links para diversas "receitas de bolo" ao estilo dos livros 
 
 *  <a target="_blank" href="Receitas/Html, css e JavaScript/5.JS - Arrow e Callback Functions"> Arrow functions, callback functions e constantes </a> ✅
 
-*  <a target="_blank" href=""> Objetos JSON </a>
+*  <a target="_blank" href="Receitas/Html, css e JavaScript/6.Objetos JSON"> Objetos JSON </a>
 
-*  <a target="_blank" href=""> Mais objetos JSON </a>
+*  <a target="_blank" href="Receitas/Html, css e JavaScript/7.Objetos JSON"> Mais objetos JSON </a>
 
-*  <a target="_blank" href=""> Função fetch() </a>
+*  <a target="_blank" href="Receitas/Html, css e JavaScript/8.Fetch"> Função fetch() </a>
 
 ## React "puro"
 
