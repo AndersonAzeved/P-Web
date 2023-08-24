@@ -11,7 +11,7 @@ Esta página contem links para diversas "receitas de bolo" ao estilo dos livros 
 
 *   JavaScript básico, no navegador, com funções elementos DOM e eventos ✅
 
-*   Arrays JavaScript, com métodos map() e join() 
+*   Arrays JavaScript, com métodos map() e join() ✅
 
 *   Arrow functions, callback functions e constantes 
 
