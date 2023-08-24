@@ -5,15 +5,15 @@ Esta página contem links para diversas "receitas de bolo" ao estilo dos livros 
 
 # Html, css e JavaScript
 
-*  <a href="Receitas/1.HTML Básico" target="_blank"> html básico do básico do básico </a> ✅
+*  <a target="_blank" href="Receitas/1.HTML Básico"> html básico do básico do básico </a> ✅
 
-*  <a href="Receitas/2.CSS Básico" target="_blank"> html com cascade style sheets, ou css </a> ✅
+*  <a target="_blank" href="Receitas/2.CSS Básico"> html com cascade style sheets, ou css </a> ✅
 
-*  <a href="Receitas/3.JavaScript básico" target="_blank"> JavaScript básico, no navegador, com funções elementos DOM e eventos </a> ✅
+*  <a target="_blank" href="Receitas/3.JavaScript básico"> JavaScript básico, no navegador, com funções elementos DOM e eventos </a> ✅
 
-*  <a href="Receitas/4.JavaScript básico 2" target="_blank"> Arrays JavaScript, com métodos map() e join() </a> ✅
+*  <a target="_blank" href="Receitas/4.JavaScript básico 2"> Arrays JavaScript, com métodos map() e join() </a> ✅
 
-*  <a href="Receitas/5.JS - Arrow e Callback Functions" target="_blank"> Arrow functions, callback functions e constantes </a> ✅
+*  <a target="_blank" href="Receitas/5.JS - Arrow e Callback Functions"> Arrow functions, callback functions e constantes </a> ✅
 
 *  <a href=""> Objetos JSON </a>
 
