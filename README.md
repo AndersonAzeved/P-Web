@@ -1,7 +1,4 @@
-~~~html
-    <title> Programação Web - 2023.2 </title>
-~~~
-# Diretório da disciplina Programação Web - 2023.2
+# Programação Web - 2023.2
 
 # Programação Web com Node JS + Next JS + React
 Esta página contem links para diversas "receitas de bolo" ao estilo dos livros de programação da série "cookbook".
