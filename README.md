@@ -5,7 +5,7 @@ Esta página contem links para diversas "receitas de bolo" ao estilo dos livros 
 
 # Html, css e JavaScript
 
-*  <a href=""><a href="https://sites.google.com/view/fabricio10/p%C3%A1gina-inicial/cursos/pweb/html-b%C3%A1sico"> html básico do básico do básico </a> ✅
+*  <a href="https://sites.google.com/view/fabricio10/p%C3%A1gina-inicial/cursos/pweb/html-b%C3%A1sico"> html básico do básico do básico </a> ✅
 
 *  <a href=""> html com cascade style sheets, ou css </a> ✅
 
