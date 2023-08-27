@@ -22,31 +22,40 @@
             {name: "Desperados", alcohol: "6%", style: "Cream Ale", ibu: 15}, 
             {name: "Becks", alcohol: "5%", style: "Pilsen", ibu: 25}]
 
-        let propriedade = ["name","alcohol","style","ibu"]
+        let pro = ["name","alcohol","style","ibu"]
         
         let cabecalho = ["Nome", "Álcool", "Estilo", "Amargor"]
 
         //cs é um array de cervejas
-        const carregarDiv = (cs,prop,cabecalho) => {
+        const carregarDiv = (cs,prop,cabecalho,propriedade) => {
             //const div = document.getElementById("cervejasDiv")
             if (prop == undefined) {
                 prop = "cervejasDiv"
             }
 
             if(cabecalho.length < 4) cabecalho = ["Nome", "Álcool", "Estilo", "Amargor"]
+            if(propriedade.length < 4) propriedade = ["name","alcohol","style","ibu"]
 
             const div = document.getElementById(prop)
 
             const itensProp = propriedade.map(p => p)
 
-            const itensHtml = cs.map(item => 
+            /*const itensHtml = cs.map(item => 
                 `<tr>
                     <td>${item['name']}</td>
                     <td>${item['alcohol']}</td>
                     <td>${item['style']}</td>
                     <td>${item['ibu']}</td>
                 </tr>`
-            )
+            )*/
+
+            const itensHtml = cs.map(item => 
+                `<tr>
+                    ${propriedade.map(p => 
+                        `<td>${item[p]}</td>`
+                    )}
+                </tr>`
+            )          
 
             const itensCabe = cabecalho.map(cabe => `<th>${cabe}</th>`)
             div.innerHTML = 
@@ -54,15 +63,14 @@
                 <tr>
                     ${itensCabe.join("\n")}
                 </tr>
-                <tr>
                 ${itensHtml.join("\n")}
             </table>`
         }
 
         let botao = document.getElementById("botaoCarregar")
-        botao.addEventListener("click", () => carregarDiv(cervejas,"cervejasDiv",cabecalho))
+        botao.addEventListener("click", () => carregarDiv(cervejas,"cervejasDiv",cabecalho,pro))
 
         let anu10 = document.getElementById("botao_2")
-        anu10.addEventListener("click", () => carregarDiv(cervejas,"cervejas_2",cabecalho))
+        anu10.addEventListener("click", () => carregarDiv(cervejas,"cervejas_2",cabecalho,pro))
     </script>
 </html>
