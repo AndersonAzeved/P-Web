@@ -1,0 +1,32 @@
+table, th, td{
+    border:solid black;
+}
+
+th{
+    background-color: rgb(216, 29, 70);
+    color: white;
+}
+
+table{
+    margin: 0 auto;
+}
+
+.botaoCarregar{
+    text-align: center;
+
+}
+
+.botao{
+    border-radius: 25px;
+    background-color: rgb(216, 29, 70);
+    color: white;
+}
+
+footer{
+    text-align: center;
+    background-image: url("https://blog.beard.com.br/wp-content/uploads/2016/12/Cerveja-no-caf%C3%A9-da-manh%C3%A3-Uma-nova-tend%C3%AAncia-no-Brasil.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto;
+    padding: 200px;
+}
