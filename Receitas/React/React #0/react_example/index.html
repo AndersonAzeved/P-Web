@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ReactZero</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1 id="h1-text">Cervejas e Informações</h1>
+    <div id="app">
+
+    </div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <script>
+        ReactDOM.render(
+            /*React.createElement(
+                'h1',
+                {id: 'my-heading'},
+                React.createElement(
+                    'span',
+                    null,
+                    'React ',
+                    React.createElement('em', null, 'é muito'),
+                ),
+                ' massa!'
+            ),*/
+                React.createElement(
+                    'table', 
+                    {id: 'table'},
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement('th',null,'Cerveja'),
+                        React.createElement('th',null,'Empresa'),
+                        React.createElement('th',null,'Mercado'),
+                    ),
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement('td',null,'Budweiser'),
+                        React.createElement('td',null,'Ambev'),
+                        React.createElement('td',null,'$14,654 bilhões'),
+                    ),
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement('td',null,'Brahma'),
+                        React.createElement('td',null,'Ambev'),
+                        React.createElement('td',null,'$3,733 bilhões'),
+                    ),
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement('td',null,'Heineken'),
+                        React.createElement('td',null,'Grupo Heineken'),
+                        React.createElement('td',null,'$11,136 bilhões'),
+                    )
+                ),
+            document.getElementById('app')
+        );
+    </script>
+</body>
+</html>
