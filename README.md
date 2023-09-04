@@ -14,9 +14,7 @@
 
 *  <a target="_blank" href="Receitas/Html, css e JavaScript/6.Objetos JSON"> Objetos JSON </a> ✅
 
-*  <a target="_blank" href="Receitas/Html, css e JavaScript/7.Objetos JSON"> Mais objetos JSON </a> ✅
-
-*  <a target="_blank" href="Receitas/Html, css e JavaScript/8.Fetch"> Função fetch() </a> ✅
+*  <a target="_blank" href="Receitas/Html, css e JavaScript/7.Fetch"> Função fetch() </a> ✅
 
 ## React "puro"
 
