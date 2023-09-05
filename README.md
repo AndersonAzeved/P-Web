@@ -20,7 +20,7 @@
 
 *  <a target="_blank" href="Receitas/React/React #0/react_example/index.html"> Introdução ao React </a> ✅
 
-*  <a target="_blank" href="Receitas/React/React #1/react_example/"> Introdução ao JSX e componentes funcionais </a>
+*  <a target="_blank" href="Receitas/React/React #1/react_example/"> Introdução ao JSX e componentes funcionais </a> ✅
 
 *  <a target="_blank" href="Receitas/React/React #2/"> Componentes React com classes e mais detalhes JSX </a>
 
