@@ -4,24 +4,157 @@
     <title>ReactZero</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
-    <div id="app">
 
+<body>
+
+    <div id="cabecalho"></div>
+    <div id="app"></div>
+
+    <br>
+    <hr> 
+
+    <div id="divCachaca">
+        <h1>Mostrar Cachaças</h1>
+        <div id="cachaca"></div>
+        <br>
+        <button id="botaoCachaca">Carregar</button>
     </div>
+
+
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone/babel.min.js" crossorigin></script>
 
     <script type="text/babel">
+        let propriedades = ['id','Cachaça','Cidade','UF','Graduação',]
+        let cachacaJson = [
+            {
+                "id": 1,
+                "Cachaça": "Aguardente Solar de Blumenau [33]",
+                "Cidade": "Blumenau",
+                "UF": "SC",
+                "Graduação": "38,70%"
+            },
+            {
+                "id": 2,
+                "Cachaça": "Cachaça Jeribita",
+                "Cidade": "Mamanguape",
+                "UF": "PB",
+                "Graduação": "40,00%"
+            },
+            {
+                "id": 3,
+                "Cachaça": "Cachaça Ordinária di Minas [34]",
+                "Cidade": "Felixlândia",
+                "UF": "MG",
+                "Graduação": "42,00%"
+            },
+            {
+                "id": 4,
+                "Cachaça": "Cachaça Dedo de Prosa [35]",
+                "Cidade": "Piranguinho",
+                "UF": "MG",
+                "Graduação": "40,00%"
+            },
+            {
+                "id": 5,
+                "Cachaça": "Água Doce [36]",
+                "Cidade": "Tupã",
+                "UF": "SP",
+                "Graduação": "45,00%"
+            },
+            {
+                "id": 6,
+                "Cachaça": "Cachaça Paus & Picas",
+                "Cidade": "Rezende",
+                "UF": "SP",
+                "Graduação": "47,00%"
+            },
+            {
+                "id": 7,
+                "Cachaça": "Ariana",
+                "Cidade": "Cláudio",
+                "UF": "MG",
+                "Graduação": "ND"
+            },
+            {
+                "id": 8,
+                "Cachaça": "Armazém Vieira",
+                "Cidade": "Florianópolis",
+                "UF": "SC",
+                "Graduação": "40,00%"
+            },
+            {
+                "id": 9,
+                "Cachaça": "Áurea Custódio",
+                "Cidade": "Ribeirão das Neves",
+                "UF": "MG",
+                "Graduação": ""
+            },
+            {
+                "id": 10,
+                "Cachaça": "Barrôca",
+                "Cidade": "Congonhas",
+                "UF": "MG",
+                "Graduação": "45,00%"
+            },
+        ]
+
+        const TabelaBebidas = () => {
+            return (
+            <div id="app">
+                <table id="tabela" border="1">
+                    <thead><tr><th>Nome</th><th>Marca</th></tr></thead>
+                    <tbody><tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr></tbody>
+                </table>
+            </div>
+           )
+        }
+
+        const Cabecalho = () => {
+            return (<h1>Minha tabela de bebidas</h1>)
+        }
+
+        const Cachaca = () => {
+            return (
+                <div id="cachaca">
+                    <table id="cachacaTab" border="1">
+                        <thead>
+                            <tr>
+                                {propriedades.map(prop => <th>{prop}</th>)}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cachacaJson.map(item => 
+                                <tr>
+                                    {propriedades.map(prop => <td>{item[prop]}</td>)}
+                                </tr>)}
+                        </tbody>
+                    </table>
+                </div>
+            )
+        }
+
+        const teste = () => {
+            ReactDOM.render(
+            <Cachaca/>,
+            document.getElementById("cachaca")
+        )
+        }
+      
         ReactDOM.render(
-           <div id="app">
-              <table id="tabela" border="1">
-                <tr><th>Nome</th><th>Marca</th></tr>
-                <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
-              </table>
-           </div>
-           ,
-           document.getElementById("app"))
+            <Cabecalho/>,
+            document.getElementById("cabecalho")
+        )
+
+        ReactDOM.render(
+            <TabelaBebidas/>,
+            document.getElementById("app")
+        )
+
+        let botaoCachaca = document.getElementById('botaoCachaca')
+        botaoCachaca.addEventListener("click", () => teste())
+
     </script>
 </body>
 </html>
