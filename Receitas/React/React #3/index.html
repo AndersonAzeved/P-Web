@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>ReceitaReact - 3</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div id="app"></div>
+
+
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone/babel.min.js" crossorigin></script>
+
+        <script type="text/babel">
+
+            /*const TabelaBebidas = ({titulo, cabecalhos:[cabecalho1,cabecalho2,cabecalho3,cabecalho4], conteudo:[c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12]}) => {
+                return (
+                    <div>
+                        <h1>{titulo}</h1>
+                        <table id="tabela" border="1">
+                            <thead>
+                                <tr>
+                                    <th>{cabecalho1}</th>
+                                    <th>{cabecalho2}</th>
+                                    <th>{cabecalho3}</th>
+                                    <th>{cabecalho4}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>{c1}</td><td>{c2}</td><td>{c3}</td><td>{c4}</td></tr>
+                                <tr><td>{c5}</td><td>{c6}</td><td>{c7}</td><td>{c8}</td></tr>
+                                <tr><td>{c9}</td><td>{c10}</td><td>{c11}</td><td>{c12}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                )
+            }*/
+
+            const TabelaBebidas = ({titulo, cabecalhos, conteudo}) => {
+                return (
+                    <div>
+                        <h1>{titulo}</h1>
+                        <table id="tabela" border="1">
+                            <thead>
+                                <tr>
+                                    {cabecalhos.map(cabecalho => <th>{cabecalho}</th>)}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {conteudo.map(item => 
+                                   <tr>{cabecalhos.map(cabecalho =>
+                                    <td>{item[cabecalho]}</td>)}</tr>)}
+                            </tbody>
+                        </table>
+                    </div>
+                )
+            }
+
+            const valoresCabecalhos = ["Cachaça", "Cidade","UF","Graduação"]
+            const valoresConteudo = [
+                "Aguardente Solar de Blumenau [33]", 'Blumenau', 'SC','38,70%',
+                'Cachaça Jeribita',	'Mamanguape',	'PB',	'40,00%',
+                'Armazém Vieira',	'Florianópolis'	,'SC',	'40,00%'
+            ]
+
+            const propriedades = ['id','Cachaça','Cidade','UF','Graduação',]
+            const cachacaJson = [
+                {
+                    "id": 1,
+                    "Cachaça": "Aguardente Solar de Blumenau [33]",
+                    "Cidade": "Blumenau",
+                    "UF": "SC",
+                    "Graduação": "38,70%"
+                },
+                {
+                    "id": 2,
+                    "Cachaça": "Cachaça Jeribita",
+                    "Cidade": "Mamanguape",
+                    "UF": "PB",
+                    "Graduação": "40,00%"
+                },
+                {
+                    "id": 3,
+                    "Cachaça": "Cachaça Ordinária di Minas [34]",
+                    "Cidade": "Felixlândia",
+                    "UF": "MG",
+                    "Graduação": "42,00%"
+                },
+                {
+                    "id": 4,
+                    "Cachaça": "Cachaça Dedo de Prosa [35]",
+                    "Cidade": "Piranguinho",
+                    "UF": "MG",
+                    "Graduação": "40,00%"
+                },
+                {
+                    "id": 5,
+                    "Cachaça": "Água Doce [36]",
+                    "Cidade": "Tupã",
+                    "UF": "SP",
+                    "Graduação": "45,00%"
+                },
+                {
+                    "id": 6,
+                    "Cachaça": "Cachaça Paus & Picas",
+                    "Cidade": "Rezende",
+                    "UF": "SP",
+                    "Graduação": "47,00%"
+                },
+                {
+                    "id": 7,
+                    "Cachaça": "Ariana",
+                    "Cidade": "Cláudio",
+                    "UF": "MG",
+                    "Graduação": "ND"
+                },
+                {
+                    "id": 8,
+                    "Cachaça": "Armazém Vieira",
+                    "Cidade": "Florianópolis",
+                    "UF": "SC",
+                    "Graduação": "40,00%"
+                },
+                {
+                    "id": 9,
+                    "Cachaça": "Áurea Custódio",
+                    "Cidade": "Ribeirão das Neves",
+                    "UF": "MG",
+                    "Graduação": "45,00%"
+                },
+                {
+                    "id": 10,
+                    "Cachaça": "Barrôca",
+                    "Cidade": "Congonhas",
+                    "UF": "MG",
+                    "Graduação": "45,00%"
+                },
+            ]
+
+            ReactDOM.render(
+                <TabelaBebidas titulo="minha tabela de cana" cabecalhos={propriedades} conteudo={cachacaJson}/>
+                ,
+                document.getElementById("app"))
+
+        </script>
+
+
+
+    </body>
+
+</html>
