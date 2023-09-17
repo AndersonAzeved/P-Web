@@ -7,9 +7,9 @@ export default function Home(){
          <h2>
             Viva Santana!
          </h2>
-         {Titulo()}
-         {Autor()}
-         {Letra()}
+         <Titulo/>
+         <Autor/>
+         <Letra/>
       </div>
    )
 }
