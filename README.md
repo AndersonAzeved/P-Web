@@ -28,9 +28,9 @@
 
 ## React com NextJS
 
-*  <a target="_blank" href=""> Sistemas web com nextjs, do zero </a>
+*  <a target="_blank" href=""> Sistemas web com nextjs, do zero </a> ✅
 
-*  <a target="_blank" href=""> Páginas e componentes em aplicações nextjs </a>
+*  <a target="_blank" href=""> Páginas e componentes em aplicações nextjs </a> ✅
 
 *  <a target="_blank" href=""> Interação com sistemas externos a partir do servidor, via função fetch() </a>
 
