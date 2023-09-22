@@ -1,0 +1,100 @@
+.forms{
+    border-radius: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    position: relative;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 25px;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.forms input{
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.forms button{
+    border-radius: 25px;
+    margin-left: 20px;
+}
+
+.buttonContainer h1{
+    margin-bottom: 100px;
+    align-items: end;
+}
+
+.conteudo{
+    margin-bottom: 50px;
+    margin-right: 100px;
+    position: relative;
+    padding: 10px;
+}
+
+
+/*------------------*/
+/* Estilização básica do botão */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+  /* Estilização quando o mouse está sobre o botão */
+.button:hover {
+    background-color: rgb(53, 50, 50);
+    color: white;
+}
+  
+  /* Centralizar o botão horizontalmente */
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Isso centraliza verticalmente também */
+    border-radius: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    position: relative;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 25px;
+    color: white;
+    padding: 50px;
+}
+
+
+/*--------------------------------------*/
+/* Estilização básica para campos de entrada de texto */
+.input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Estilização quando o foco está no campo */
+.input[type="text"]:focus {
+    border-color: blue; /* Mudar a cor da borda quando o campo está em foco */
+    outline: none; /* Remover a borda padrão do navegador */
+  }
+  
+  /* Estilização para campos de entrada de texto obrigatórios */
+.input[type="text"]:required {
+    border-color: red; /* Mudar a cor da borda para indicar um campo obrigatório */
+  }
+  

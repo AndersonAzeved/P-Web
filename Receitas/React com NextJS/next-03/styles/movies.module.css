@@ -1,0 +1,109 @@
+.galeria{
+    column-gap: 0;
+    column-count: 3;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.galeria:has(.poster:hover) .poster:not(:hover){
+    scale: .9;
+    opacity: .7;
+}
+
+.ul{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+    padding: 10px;
+}
+
+.li{
+    margin: 0 20px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.poster{
+    display: flex;
+    width: 90%;
+    aspect-ratio: 10px;
+    object-fit: cover;
+    color: white;
+    transition: scale 350ms ease; opacity: 350ms linear;
+    background-color: black;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.imgPoster{
+    width: 50%;
+    border-radius: 15px;
+    margin-left: -15px;
+    object-fit: cover;
+}
+
+.textPoster{
+    position: absolute;
+    font-family: 'Copperplate', Copperplate Gothic Light, fantasy;
+    font-size: 20px;
+    flex-grow: 1;
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+
+/* Erro de fatch --------------------*/
+.erro{
+    position: relative;
+    background-color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+.erro h1{
+    color: white;
+    size: 40px;
+}
+
+.erro p{
+    color: white;
+    size: 20px;
+    margin-top: 60px;
+}
+
+
+/*
+.galeria{
+    column-gap: 0;
+    column-count: 3;
+}
+
+.poster{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+    transition: scale 350ms ease; opacity: 350ms linear;
+}
+
+.galeria:has(.poster:hover) .poster:not(:hover){
+    scale: .9;
+    opacity: .7;
+}
+
+*/
