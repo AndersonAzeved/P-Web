@@ -16,6 +16,8 @@
 
 *  <a target="_blank" href="Receitas/Html, css e JavaScript/7.Fetch"> Função fetch() </a> ✅
 
+*  <a target="_blank" href="Receitas/Html, css e JavaScript/8.Promessas/"> Promessas </a> ✅
+
 ## React "puro"
 
 *  <a target="_blank" href="Receitas/React/React #0/react_example/index.html"> Introdução ao React </a> ✅
@@ -28,20 +30,20 @@
 
 ## React com NextJS
 
-*  <a target="_blank" href=""> Sistemas web com nextjs, do zero </a> ✅
+*  <a target="_blank" href="Receitas/React com NextJS/next-01/"> Sistemas web com nextjs, do zero </a> ✅
 
-*  <a target="_blank" href=""> Páginas e componentes em aplicações nextjs </a> ✅
+*  <a target="_blank" href="Receitas/React com NextJS/next-02/"> Páginas e componentes em aplicações nextjs </a> ✅
 
-*  <a target="_blank" href=""> Interação com sistemas externos a partir do servidor, via função fetch() </a>
+*  <a target="_blank" href="Receitas/React com NextJS/next-03/"> Interação com sistemas externos a partir do servidor, via função fetch() </a> ✅
 
-*  <a target="_blank" href=""> Interação com sistemas externos a partir do navegador; método stale while revalidating </a>
+*  <a target="_blank" href="Receitas/React com NextJS/next-04/"> Interação com sistemas externos a partir do navegador; método stale while revalidating </a>
 
-*  <a target="_blank" href=""> Manutenção de estado de componentes; hooks useSWR e useState() </a>
+*  <a target="_blank" href="Receitas/React com NextJS/next-05/"> Manutenção de estado de componentes; hooks useSWR e useState() </a>
 
-*  <a target="_blank" href=""> Pesquisas a partir de formulários </a>
+*  <a target="_blank" href="Receitas/React com NextJS/next-06/"> Pesquisas a partir de formulários </a>
 
-*  <a target="_blank" href=""> Acesso a banco de dados relacionais I </a>
+*  <a target="_blank" href="Receitas/React com NextJS/next-07/"> Acesso a banco de dados relacionais I </a>
 
-*  <a target="_blank" href=""> Acesso a banco de dados relacionais II </a>
+*  <a target="_blank" href="Receitas/React com NextJS/next-08/"> Acesso a banco de dados relacionais II </a>
 
-*  <a target="_blank" href=""> Rotas dinâmicas e geração de conteúdo estático </a>
+*  <a target="_blank" href="Receitas/React com NextJS/next-09/"> Rotas dinâmicas e geração de conteúdo estático </a>
