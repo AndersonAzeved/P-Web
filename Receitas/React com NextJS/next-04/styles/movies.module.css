@@ -1,0 +1,123 @@
+.galeria{
+    column-gap: 0;
+    column-count: 3;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: auto;
+}
+
+
+.galeria:has(.poster:hover) .poster:not(:hover){
+    scale: .9;
+    opacity: .7;
+}
+
+.galeria button{
+    background: transparent;
+    border: none;
+}
+
+.ul{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+    padding: 10px;
+}
+
+.li{
+    margin: 0 20px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.poster{
+    display: flex;
+    width: 400px;
+    height: 200px;
+    aspect-ratio: 10px;
+    object-fit: cover;
+    color: white;
+    transition: scale 350ms ease; opacity: 350ms linear;
+    background-color: black;
+    border-radius: 15px;
+    position: relative;
+}
+
+.imgPoster{
+    max-width: 60%;
+    border-radius: 15px;
+    margin-top: 7%;
+    justify-items: baseline;
+    object-fit: cover;
+}
+
+.imgPoster img{
+    width: 60%;
+    border-radius: 15px;
+    margin-top: -7%;
+}
+
+.textPoster{
+    position: relative;
+    font-family: 'Copperplate', Copperplate Gothic Light, fantasy;
+    font-size: 20px;
+    text-align: right;
+    margin-top: 20%;
+    margin-right: 15%;
+    margin-left: 10%
+}
+
+
+/* Erro de fatch --------------------*/
+.erro{
+    position: relative;
+    background-color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+.erro h1{
+    color: white;
+    size: 40px;
+}
+
+.erro p{
+    color: white;
+    size: 20px;
+    margin-top: 60px;
+}
+
+
+/*
+.galeria{
+    column-gap: 0;
+    column-count: 3;
+}
+
+.poster{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+    transition: scale 350ms ease; opacity: 350ms linear;
+}
+
+.galeria:has(.poster:hover) .poster:not(:hover){
+    scale: .9;
+    opacity: .7;
+}
+
+*/
