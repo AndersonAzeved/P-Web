@@ -45,10 +45,11 @@ export default function MinhaPagina() {
                     <div>
                         <section className={styles.galeria}>
                             {data?.Search?.map( (m) => ( 
-                                valorId = m.imdbID,
                                 <button onClick={() => cliclkButtonFilme(m.imdbID)}>
                                     <div className={styles.poster}>
-                                        <div><img src={m.Poster} className={styles.imgPoster}/></div>
+                                        <div>
+                                            <img src={m.Poster} className={styles.imgPoster}/>
+                                        </div>
                                         <p className={styles.textPoster}>{m.Title}, {m.Year}</p>
                                     </div>
                                 </button>

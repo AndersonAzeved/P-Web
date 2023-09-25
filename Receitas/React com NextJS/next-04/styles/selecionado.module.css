@@ -93,13 +93,12 @@
 
 
 .imgPoster{
-    margin-top: 8%;
+    margin-top: 6%;
     margin-left: 2%;
     object-fit: cover;
-    width: 95%;
 }
 
 .imgPoster img{
-    width: 100%;
+    width: 300px;
     object-fit: cover;
 }
