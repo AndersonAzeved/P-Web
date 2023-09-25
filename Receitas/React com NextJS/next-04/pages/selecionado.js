@@ -23,18 +23,38 @@ export default function Selecionado(){
             <>
                 <Nav/>
 
-                <div className={styles.div}>
-                    {array?.map((m) => (
-                        <div>
-                            <h1>{m.Title}</h1>
-                            <img src={m.Poster} className={styles.imgPoster}/>
-                            <div className={styles.divInfo}>
-                                <p className={styles.ano}>Ano: {m.Year}</p>
-                                <p className={styles.lancamento}>Lançamento: {m.Released}</p>
+                {array?.map((m) => (
+                    <div className={styles.div}>
+                        <div className={styles.imgPoster}>
+                            <img src={m.Poster}/>
+                        </div>
+                                               
+                        <div className={styles.divInfo}>
+                            <div className={styles.h1}>
+                                <h1>{m.Title}</h1>
+                            </div>
+                            <div className={styles.div1}>
+                                <div className={styles.div2}>
+                                    <p>Ano: {m.Year}</p>
+                                    <p>Lançamento: {m.Released}</p>
+                                    <p>Duração: {m.Runtime}</p>
+                                    <p>Gênero: {m.Genre}</p>
+                                    <p>Diretor: {m.Director}</p>
+                                </div>
+                                <br></br>
+                                <div className={styles.div3}>
+                                    <p>Atores: {m.Actors}</p>
+                                    <p>Linguagem: {m.Language}</p>
+                                    <p>País: {m.Country}</p>
+                                    <p>Tipo: {m.Type}</p>
+                                </div>
+                            </div>
+                            <div className={styles.sinopse}>
+                                <p>Sinopse: {m.Plot}</p>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </>
             
         )
