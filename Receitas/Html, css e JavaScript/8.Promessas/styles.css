@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    margin-top: 15px;
+}
+
+div{
+    text-align: center;
+}
+
+#butao{
+    text-align: center;
+    margin-top: 25px;
+    background: none;
+    background-color: none;
+    border-radius: 25px;
+}
+
+#cervejasDiv{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#color-div{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
