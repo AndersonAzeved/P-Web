@@ -1,4 +1,4 @@
-let cervejas = []  
+/*let cervejas = []  
 
 //cs é um array de cervejas
 
@@ -9,6 +9,9 @@ const carregarDiv = cs => {
             `<div>
                 <p>Nome: ${name}</p>
                 <p>Teor: ${alcohol}</p>
+                <p>Marca: ${brand}</p>
+                <p>Estilo: ${style}</p>
+                <p>Ibu: ${ibu}</p>
                 <hr>
             </div>` 
         ) 
@@ -98,7 +101,7 @@ async function carregar(api,div_nome,json,cabecalho,propriedade,titulo){
     }
 }
 
-*/
+
 
 
 let botao = document.getElementById("botaoCarregar")
@@ -106,3 +109,61 @@ botao.addEventListener("click", () => carregarCervejas2() )
 
 let color = document.getElementById("color")
 color.addEventListener("click", () => carregarCores())
+*/
+
+
+
+
+let json = []
+
+let proCer = ['name','alcohol','brand','style','ibu']
+let cabeCer = ["Nome", "Álcool", 'Marca', "Estilo", "Ibu"]
+
+let proCor = ['hex_value','color_name']
+let cabeCor = ['Id',"Nome"]
+
+let apis = [
+    {beer: "https://random-data-api.com/api/v2/beers?size=3"},
+    {color: "https://random-data-api.com/api/color/random_color?size=3"},
+]
+
+const carregarDiv = (div_nome,json,cabecalho,propriedade,titulo) => {
+    const div = document.getElementById(div_nome)
+
+    const itensHtml = json.map(item => 
+        `<tr>
+            ${propriedade.map(p => 
+                `<td>${item[p]}</td>`
+            ).join("")}
+        </tr>`
+    )          
+
+    const itensCabe = cabecalho.map(cabe => `<th>${cabe}</th>`)
+    div.innerHTML = 
+    `<h2 style="text-align:center; color: rgb(216, 29, 70);">${titulo}</h2>
+    <table>
+        <tr>
+            ${itensCabe.join("\n")}
+        </tr>
+        ${itensHtml.join("\n")}
+    </table>`
+    
+} 
+
+function carregarPromessas(api,div_nome,json,cabecalho,propriedade,titulo){
+    fetch(api).then(
+        res => res.json()
+    ).then( 
+        json => carregarDiv(div_nome,json,cabecalho,propriedade,titulo)
+    ).catch(
+        err => document.getElementById(div_nome).innerHTML = `Fudeu... ${err}`
+    )
+    document.getElementById(div_nome).innerHTML = `Fazendo requisição`          
+}
+
+
+let cervejar = document.getElementById("botaoCarregar")
+cervejar.addEventListener("click", () => carregarPromessas(apis[0]['beer'],"butao",json,cabeCer,proCer,"Carregando Cervejas"))
+
+let color = document.getElementById("color")
+color.addEventListener("click", () => carregarPromessas(apis[1]['color'],"color-div",json,cabeCor,proCor,"Carregando Cafés"))
