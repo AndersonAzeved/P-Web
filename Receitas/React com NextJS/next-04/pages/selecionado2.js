@@ -10,7 +10,8 @@ export default function Selecionado(){
     const array = []
 
     const {data, error} = useSWR(`http://www.omdbapi.com/?apikey=31c8f11c&i=${idFilme}`, fetcher)
-    
+    console.log('Valor de id depois: ', idFilme)
+    console.log('Data é: ', data)
     if (error) return <div>falha na requisição...</div>
     if (!data) return <div>carregando...</div>
 

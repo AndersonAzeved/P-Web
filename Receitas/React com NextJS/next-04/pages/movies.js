@@ -84,8 +84,8 @@ export default function MinhaPagina() {
                             {array?.map( (m) => ( 
                                 <button onClick={() => cliclkButtonFilme(m.imdbID)}>
                                     <div className={styles.poster}>
-                                        <div className={styles.imgPoster}>
-                                            <img src={m.Poster}/>
+                                        <div >
+                                            <img className={styles.imgPoster} src={m.Poster}/>
                                         </div>
                                         <p className={styles.textPoster}>{m.Title}, {m.Year}</p>
                                     </div>
@@ -112,8 +112,11 @@ export function Nav(){
                 <li className={styles.li}>
                     <Link className={styles.link} href='/home'>Home</Link>
                 </li>
-                <li>
+                <li className={styles.li}>
                     <Link className={styles.link} href='/busca'>Buscar</Link>
+                </li>
+                <li className={styles.li}>
+                    <Link className={styles.link} href='/infoLocal'>Informação Cliente</Link>
                 </li>
             </ul>
         </>

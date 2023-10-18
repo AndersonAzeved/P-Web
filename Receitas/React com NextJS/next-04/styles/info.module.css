@@ -1,0 +1,19 @@
+.info{
+    position: relative;
+    background-color: black;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 25px;
+    color: white;
+    columns: 2;
+}
+
+.titulo{
+    text-decoration: underline black;
+    text-align: center;
+}
+
+.info h1{
+    text-decoration: underline white;;
+}
