@@ -21,7 +21,7 @@ export default function MinhaPagina() {
         };
 
         router.push({
-            pathname: '/selecionado',
+            pathname: '/selecionadoServer',
             query
         })
     }

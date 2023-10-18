@@ -2,6 +2,7 @@ import { Nav, Erro } from "./movies"
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
 import styles from '../styles/selecionado.module.css'
+import { useState, useEffect } from 'react';
 
 
 export default function Selecionado(){
@@ -9,10 +10,22 @@ export default function Selecionado(){
     const idFilme = router.query.idFilme
     const array = []
 
-    const {data, error} = useSWR(`http://www.omdbapi.com/?apikey=31c8f11c&i=${idFilme}`, fetcher)
-    console.log('Valor de id depois: ', idFilme)
-    console.log('Data é: ', data)
-    if (error) return <div>falha na requisição...</div>
+    const [data, setData] = useState(null)
+    const [carrega, setCarrega] = useState(false)
+
+    const load =  async (idFilme) => {
+        const res = await fetch(`http://www.omdbapi.com/?apikey=31c8f11c&i=${idFilme}`)
+        const json = await res.json()
+        setData(json)
+        setCarrega(true)
+    }
+    
+    if(carrega == false){
+        load(idFilme)
+    }
+        
+
+    console.log('Estamos no selecionadoServer')
     if (!data) return <div>carregando...</div>
 
     if(data.Response == 'False' || data == undefined){
@@ -66,3 +79,16 @@ async function fetcher(url){
     const json = await res.json()
     return json
 }
+
+/*
+
+    function carregarPromessas(api,div_nome,json,cabecalho,propriedade,titulo){
+        fetch(api).then(
+            res => res.json()
+        ).then( 
+            json => carregarDiv(div_nome,json,cabecalho,propriedade,titulo)
+        ).catch(
+            err => document.getElementById(div_nome).innerHTML = `Fudeu... ${err}`
+        )
+        document.getElementById(div_nome).innerHTML = `Fazendo requisição`          
+    }*/
