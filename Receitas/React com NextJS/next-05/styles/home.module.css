@@ -1,0 +1,21 @@
+.div{
+    position: relative;
+    background-color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+.div h1{
+    color: white;
+    size: 40px;
+}
+
+.div p{
+    color: white;
+    size: 20px;
+    margin-top: 60px;
+}
