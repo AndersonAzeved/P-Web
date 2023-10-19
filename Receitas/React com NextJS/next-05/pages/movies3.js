@@ -1,5 +1,6 @@
 import useSWR from 'swr'
 import {useState} from 'react'
+import {Card, StyledBody} from 'baseui/card';
 
 
 export default function Movies3(){
@@ -35,7 +36,18 @@ export function TheMovies({data,show}){
 
     return (
         <div>
-            { data.Search.map( (m) => <div>{m.Title} --- {m.Year}</div>  ) }            
+            { data.Search.map( (m) => 
+                //<div>{m.Title} --- {m.Year}</div>  
+                <>
+                    <StyledBody/>
+                        {m.Title} - {m.Year}
+                    <StyledBody/>
+                    <Card
+                        overrides={{Root: {style: {width: '328px', backgroundColor: 'black'}}}}
+                        headerImage={m.Poster}
+                    />                   
+                </>
+            )}            
         </div>
     )
 }
