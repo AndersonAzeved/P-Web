@@ -121,6 +121,9 @@ export function Nav(){
                 <li className={styles.li}>
                     <Link className={styles.link} href='/infoLocal'>Informação Cliente</Link>
                 </li>
+                <li className={styles.li}>
+                    <Link className={styles.link} href='/searchmovies/busca'>Receita 5</Link>
+                </li>
             </ul>
         </>
 

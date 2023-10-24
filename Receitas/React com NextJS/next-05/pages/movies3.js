@@ -1,6 +1,9 @@
 import useSWR from 'swr'
 import {useState} from 'react'
-import {Card, StyledBody} from 'baseui/card';
+import {Nav} from '../pages/movies'
+import { Button, Card, Spin } from 'antd';
+import styles from '../styles/movies3.module.css'
+import Link from 'next/link'
 
 
 export default function Movies3(){
@@ -14,10 +17,13 @@ export default function Movies3(){
     }
 
     return (
-        <div>
-            <TheLink url={url} handler={onClickHandler}/>
-            <TheMovies data={ error?{error:'Erro na pesquisa'}: data ? data: {Search:''} } show={url !== ''}/>
-        </div>
+        <>
+            <Nav/>
+            <div>
+                <TheLink url={url} handler={onClickHandler}/>
+                <TheMovies data={ error?{error:'Erro na pesquisa'}: data ? data: {Search:''} } show={url !== ''}/>
+            </div>
+        </>
     )
 
 }
@@ -29,24 +35,27 @@ async function theFetcher(url) {
     return json;
 }
 
+
 export function TheMovies({data,show}){
     if (!show) return (<div></div>)    
     if (data.error) return (<div>falha na requisição</div>)
-    if (data.Search === '' ) return (<div>carregando...</div>)
+    if (data.Search === '' ) return (<div className={styles.divSpinner}><Spin size='large'/></div>)
 
+    const {Meta} = Card
+    let id
     return (
-        <div>
-            { data.Search.map( (m) => 
-                //<div>{m.Title} --- {m.Year}</div>  
-                <>
-                    <StyledBody/>
-                        {m.Title} - {m.Year}
-                    <StyledBody/>
-                    <Card
-                        overrides={{Root: {style: {width: '328px', backgroundColor: 'black'}}}}
-                        headerImage={m.Poster}
-                    />                   
-                </>
+            
+        <div className={styles.divPoster}>
+            { data.Search.map( (m) =>                
+                <Link className={styles.Link} href='../onemovie/[id].js' as={`../onemovie/${m.imdbID}`}>
+                    <Card className={styles.poster} hoverable style={{width: '90%', background: 'grey', textAlign:'center', position: 'relative'}}  
+                            cover={<img src={m.Poster} style={{background:'grey'}}/> } 
+                        >
+                        <Meta title={m.Title} description={m.Year} />
+                    </Card>      
+                    <br></br>           
+                </Link>
+    
             )}            
         </div>
     )
@@ -54,8 +63,8 @@ export function TheMovies({data,show}){
 
 export function TheLink({url, handler}){    
     return (
-        <div>
-            <a href="/movies3.js" onClick={handler}> {url === '' ? 'Mostrar' : 'Ocultar'} </a>
+        <div className={styles.divBotoes}>
+            <a href="/movies3.js" onClick={handler}> {url === '' ? <Button className={styles.Button}>Mostrar</Button> : <Button className={styles.Button}>Ocultar</Button>} </a>
         </div>
     )
 }
