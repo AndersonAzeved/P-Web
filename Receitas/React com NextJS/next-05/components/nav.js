@@ -9,16 +9,7 @@ export default function Nav(){
                 <Link className={styles.link} href='/'>Home</Link>
             </li>
             <li className={styles.li}>
-                <Link className={styles.link} href='../busca'>Buscar (Cliente)</Link>
-            </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='../buscaServer'>Buscar (Servidor)</Link>
-            </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='../infoLocal'>Informação Cliente</Link>
-            </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='../searchmovies/busca'>Receita 5</Link>
+                <Link className={styles.link} href='../searchmovies/busca'>Buscar</Link>
             </li>
         </ul>
     )

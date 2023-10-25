@@ -1,6 +1,5 @@
 import useSWR from 'swr'
 import {useState} from 'react'
-import {Nav} from '../pages/movies'
 import { Button, Card, Spin } from 'antd';
 import styles from '../styles/movies3.module.css'
 import Link from 'next/link'
@@ -17,13 +16,10 @@ export default function Movies3(){
     }
 
     return (
-        <>
-            <Nav/>
-            <div>
-                <TheLink url={url} handler={onClickHandler}/>
-                <TheMovies data={ error?{error:'Erro na pesquisa'}: data ? data: {Search:''} } show={url !== ''}/>
-            </div>
-        </>
+        <div>
+            <TheLink url={url} handler={onClickHandler}/>
+            <TheMovies data={ error?{error:'Erro na pesquisa'}: data ? data: {Search:''} } show={url !== ''}/>
+        </div>
     )
 
 }

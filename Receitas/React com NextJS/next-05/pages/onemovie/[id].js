@@ -1,4 +1,3 @@
-import { Nav, Erro } from "../movies"
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
 import styles from '../../styles/movies3.module.css'
@@ -20,14 +19,15 @@ export default function Selecionado(){
         textAlign: 'center',
         backgroundColor: 'black',
         color: 'white',
-        height: 95,
+        height: 75,
         paddingInline: 50,
         lineHeight: '64px',
     }
 
     const slider = {
         textAlign: 'center',
-        lineHeight: 0,
+        lineHeight: 30,
+        marginLeft: 10,
         color: 'white',
         backgroundColor: 'black',
     }
@@ -53,8 +53,8 @@ export default function Selecionado(){
         minHeight: '80px',
         color: 'white',
         columns: 3,
-        marginLeft: 70,
-        marginRight: 70,
+        marginLeft: 20,
+        marginRight: 20,
     }
     
 //https://ant.design/components/layout
@@ -63,42 +63,35 @@ export default function Selecionado(){
         return(<Erro/>)
     }else{
         return(
-            <>
-                <Nav/>
-
-                <Space direction="vertical" style={{width: '100%'}} size={[0,48]}>
-                    
+            <Space direction="vertical" style={{width: '100%'}} size={[0,48]}>
+                
+                <Layout style={layout}>
+                    <Sider style={slider}>
+                        {data.Poster === 'N/A' ? <img src='../../notImag.jpg' style={{width: 270, borderRadius: 15}}/>: <img src={data.Poster} style={{width: 250, borderRadius: 15}}/>}
+                    </Sider>
                     <Layout style={layout}>
-                        <Sider style={slider}>
-                            <img src={data.Poster}/>
-                        </Sider>
-                        <Layout style={layout}>
-                            <Header style={header}>
-                                <h1>{data.Title}</h1>
-                            </Header>
-                            <Content style={content}>
-                                <div className={styles.divContent}>
-                                    <p>Ano: {data.Year}</p>
-                                    <p>Lançamento: {data.Released}</p>
-                                    <p>Duração: {data.Runtime}</p>
-                                    <p>Gênero: {data.Genre}</p>
-                                    <p>Diretor: {data.Director}</p>
-                                    <p>Atores: {data.Actors}</p>
-                                    <p>Linguagem: {data.Language}</p>
-                                    <p>País: {data.Country}</p>
-                                    <p>Tipo: {data.Type}</p>
-                                </div>
-                            </Content>
-                            <Footer style={footer}>
-                                <p>{data.Plot}</p>
-                            </Footer>
-                        </Layout>
+                        <Header style={header}>
+                            <h3>{data.Title}</h3>
+                        </Header>
+                        <Content style={content}>
+                            <div className={styles.divContent}>
+                                <p>Ano: {data.Year}</p>
+                                <p>Lançamento: {data.Released}</p>
+                                <p>Duração: {data.Runtime}</p>
+                                <p>Gênero: {data.Genre}</p>
+                                <p>Diretor: {data.Director}</p>
+                                <p>Atores: {data.Actors}</p>
+                                <p>Linguagem: {data.Language}</p>
+                                <p>País: {data.Country}</p>
+                                <p>Tipo: {data.Type}</p>
+                            </div>
+                        </Content>
+                        <Footer style={footer}>
+                            <p>{data.Plot}</p>
+                        </Footer>
                     </Layout>
-                </Space>
-
-
-            </>
-            
+                </Layout>
+            </Space>
         )
     }
 }
@@ -109,36 +102,11 @@ async function fetcher(url){
     return json
 }
 
-/*
-
-                <div className={styles.div}>
-                        <div className={styles.imgPoster}>
-                            <img src={data.Poster}/>
-                        </div>
-                                               
-                        <div className={styles.divInfo}>
-                            <div className={styles.h1}>
-                                <h1>{data.Title}</h1>
-                            </div>
-                            <div className={styles.div1}>
-                                <div className={styles.div2}>
-                                    <p>Ano: {data.Year}</p>
-                                    <p>Lançamento: {data.Released}</p>
-                                    <p>Duração: {data.Runtime}</p>
-                                    <p>Gênero: {data.Genre}</p>
-                                    <p>Diretor: {data.Director}</p>
-                                </div>
-                                <br></br>
-                                <div className={styles.div3}>
-                                    <p>Atores: {data.Actors}</p>
-                                    <p>Linguagem: {data.Language}</p>
-                                    <p>País: {data.Country}</p>
-                                    <p>Tipo: {data.Type}</p>
-                                </div>
-                            </div>
-                            <div className={styles.sinopse}>
-                                <p>Sinopse: {data.Plot}</p>
-                            </div>
-                        </div>
-                    </div>
-*/
+export function Erro(){
+    return (
+        <div className={styles.erro}>
+            <h1>Não foi possível realizar a busca</h1>
+            <p>Talvez os parâmetros de busca estejam errados, tente novamente</p>
+        </div>
+    )
+}

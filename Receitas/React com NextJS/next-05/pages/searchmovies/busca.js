@@ -1,5 +1,7 @@
-import {Input, Space, } from 'antd';
+import {Input, Space, Divider } from 'antd';
 import { useRouter } from 'next/router'
+import styles from '../../styles/search.module.css'
+
 
 export default function Buscar(){
     const { Search } = Input;
@@ -9,12 +11,20 @@ export default function Buscar(){
             alert('Informe a busca')
         }else{
             router.push({
-                pathname: `../onemovie/${valor}`
+                pathname: `/searchmovies/${valor}`
             })
         }
     }
     return(
-        <div>
+        <div className={styles.search}>
+            
+            <h1>Realizar busca</h1>
+            <h3>Filmes e Séries</h3>
+            <Divider></Divider>
+
+            <hr></hr>
+            <Divider></Divider>
+            
             <Space direction="vertical">
                 <Search
                     placeholder="Buscar título"
