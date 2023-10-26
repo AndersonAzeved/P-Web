@@ -51,7 +51,7 @@ export function TheMovies({data,show}){
 
     return (
         <div>
-            { data.Search.map( (m) => <div key={m.imdbID}>{m.Title} --- {m.Year}</div>  ) }            
+            {data.Search === undefined ? <div>Busca não encontrada</div> : data.Search?.map( (m) => <div key={m.imdbID}>{m.Title} --- {m.Year}</div>  ) }            
         </div>
     )
 }
