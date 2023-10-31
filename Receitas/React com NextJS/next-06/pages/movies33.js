@@ -15,16 +15,24 @@ export default function Movies33(){
     const onClickHandler = e => {
         e.preventDefault()
         let s = document.getElementById('titleSearchString').value
-        if (state.url === '') {
-            setState({url:'http://www.omdbapi.com',titleSearchString:s})
+        if(s == ''){
+            let div = document.getElementById('info')
+            div.innerHTML = '*Campo obrigatório'
+        }else{
+            let div = document.getElementById('info')
+            div.innerHTML = ''
+            if (state.url === '') {
+                setState({url:'http://www.omdbapi.com',titleSearchString:s})
+            }else setState({url:'',titleSearchString: state.titleSearchString})
         }
-        else setState({url:'',titleSearchString: state.titleSearchString})
     }
 
     return (
         <div>
+            <title>Movies</title>
             <TheForm/>
             <TheLink url={state.url} handler={onClickHandler} />
+            <div id='info'></div>
             <TheMovies data={data ? data: {Search:''} } show={state.url !== ''} />
         </div>
     )
@@ -49,11 +57,15 @@ export function TheMovies({data,show}){
     if (data.error) return (<div>falha na pesquisa</div>)
     if (data.Search === '' ) return (<div>carregando...</div>)
 
-    return (
-        <div>
-            {data.Search === undefined ? <div>Busca não encontrada</div> : data.Search?.map( (m) => <div key={m.imdbID}>{m.Title} --- {m.Year}</div>  ) }            
-        </div>
-    )
+    let div = document.getElementById('info')
+    
+    if(data.Search == undefined){
+        div.innerHTML = 'Busca não Encontrada'
+    }else{
+        return(
+            data.Search?.map( (m) => <div key={m.imdbID}>{m.Title} --- {m.Year}</div>  )
+        )
+    }
 }
 
 
