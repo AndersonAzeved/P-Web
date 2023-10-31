@@ -62,6 +62,7 @@ export function TheMovies({data,show}){
     if(data.Search == undefined){
         div.innerHTML = 'Busca não Encontrada'
     }else{
+        div.innerHTML = ''
         return(
             data.Search?.map( (m) => <div key={m.imdbID}>{m.Title} --- {m.Year}</div>  )
         )
@@ -72,7 +73,7 @@ export function TheMovies({data,show}){
 export function TheLink({url, handler}){
     return (
         <div>
-            <a href="/movies3.js" onClick={handler}> {url === '' ? 'Mostrar' : 'Ocultar'} </a>
+            <a href="/movies3.js" onClick={handler} > {url === '' ? 'Mostrar' : 'Ocultar'} </a>
         </div>
     )
 }
