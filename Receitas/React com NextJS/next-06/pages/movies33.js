@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 import {useState} from 'react'
-
+import { useRouter } from 'next/router'
 
 export default function Movies33(){
     const [state, setState] = useState({url:'', titleSearchString:''})
@@ -11,6 +11,34 @@ export default function Movies33(){
         const json = await res.json();
         return json;
     })
+
+    const onFocus = () => {
+        if(state.url !== ''){
+            document.getElementById('titleSearchString').value = ''
+            setState({url: '', titleSearchString: ''})
+        }
+    }
+
+    const onEnter = (e) => {
+
+        document.getElementById('titleSearchString').addEventListener('keydown', (e) => {
+            
+            if(e.keyCode == 13){
+                e.preventDefault()
+                document.getElementById('titleSearchString').blur()
+                let s = document.getElementById('titleSearchString').value
+                if(s){
+                    if (state.url === '') {
+                        setState({url:'http://www.omdbapi.com',titleSearchString:s})
+                    }
+                    else setState({url:'',titleSearchString: state.titleSearchString})
+                }
+                else{
+                    setState({url:'',titleSearchString: state.titleSearchString})
+                }
+            }
+        })
+    }
 
     const onClickHandler = e => {
         e.preventDefault()
@@ -26,12 +54,12 @@ export default function Movies33(){
             }else setState({url:'',titleSearchString: state.titleSearchString})
         }
     }
-
+    //<TheLink url={state.url} handler={onClickHandler} />
     return (
         <div>
             <title>Movies</title>
-            <TheForm/>
-            <TheLink url={state.url} handler={onClickHandler} />
+            <TheForm f1={onFocus} f2={onEnter}/>
+            
             <div id='info'></div>
             <TheMovies data={data ? data: {Search:''} } show={state.url !== ''} />
         </div>
@@ -39,12 +67,12 @@ export default function Movies33(){
 }
 
 
-export function TheForm(){
+export function TheForm({f1,f2}){
     return (
         <div>
             <form>
                 <label htmlFor="titleSearchString">Filtro de Título</label>
-                <input id="titleSearchString" name="titleSearchString" type="text" autoComplete="true"/>
+                <input id="titleSearchString" name="titleSearchString" type="text" autoComplete="true" onFocus={f1} onChange={f2}/>
             </form>
         </div>
     )
