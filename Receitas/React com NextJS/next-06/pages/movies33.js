@@ -3,6 +3,7 @@ import {useState} from 'react'
 import { useRouter } from 'next/router'
 
 export default function Movies33(){
+    const [botaoRadio, setRadio] = useState('')
     const [state, setState] = useState({url:'', titleSearchString:''})
     const {data, error} = useSWR(state.url, async (u) => {
         if (!state.url || !state.titleSearchString) return {Search:''}
@@ -58,6 +59,14 @@ export default function Movies33(){
     return (
         <div>
             <title>Movies</title>
+            <form>
+                <input type='radio' id='filme' name='drone' checked onChange={() => setRadio(1)}/>
+                <label htmlFor='filme'>Filme</label>
+
+                <input type='radio' id='serie' name='drone' onChange={() => setRadio(2)}/> 
+                <label htmlFor='serie'>Serie</label>               
+            </form>
+            {botaoRadio == 1 ? console.log('É 1') : console.log('É 2')}
             <TheForm f1={onFocus} f2={onEnter}/>
             
             <div id='info'></div>
