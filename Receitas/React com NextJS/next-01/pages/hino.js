@@ -1,3 +1,5 @@
+import styles from '../styles/hino.module.css'
+
 export function Titulo(){
     return (
         <div>
@@ -10,7 +12,7 @@ export function Titulo(){
 
 export function Autor(){
     return (
-        <h3>Palmyra Wanderley</h3>
+        <h5 className={styles.autor}>Palmyra Wanderley</h5>
     )
 }
 
