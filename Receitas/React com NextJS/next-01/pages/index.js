@@ -1,11 +1,10 @@
 import styles from '../styles/hino.module.css'
-import { Autor, Letra, Titulo } from "./hino"
+import { Autor, Letra, Titulo } from "../lib/hino"
 
 
 export default function Home(){
    return (
       <div className={styles.hino}>
-         <title>Receita 1</title>
          <h2 className={styles.viva}>
             Viva Santana!
          </h2>
@@ -18,4 +17,3 @@ export default function Home(){
       </div>
    )
 }
-
