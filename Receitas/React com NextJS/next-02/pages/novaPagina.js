@@ -1,11 +1,12 @@
-import { Frase } from "./pag/pag1"
+import styles from "../styles/index.module.css"
+import { Frase } from "../lib/pag1"
 
 export default function Principal(){
     return (
-        <div>
-            <h1>Nova Página</h1>
+        <div className={styles.div}>
+            <h1 className={styles.tituloNova}>Nova Página</h1><br/>
             <MariaPrea/>
-            <Mensagem mensagem="Aqui nesse campo, dá pra por mensagem"/>
+            <Mensagem mensagem="Aqui nesse campo, dá pra por mensagem"/><br/>
             <Frase/>
             <Botao/>
         </div>
@@ -26,6 +27,6 @@ export function Mensagem(prop){
 
 export function Botao(){
     return (
-        <a href="pag/pag2">Frases Engraçadas</a>
+        <p>Para mais frases engraçadas, clique em <a href="pag/pag2">frases engraçadas</a>.</p>
     )
 }

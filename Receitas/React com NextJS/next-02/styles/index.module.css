@@ -1,0 +1,21 @@
+.titulo{
+    text-align: center;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+}
+
+.tituloNova{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.ol{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
