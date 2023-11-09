@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.footer{
+    background-color: black;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p{
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.footer img{
+    width: 25px;
+    margin-left: 20px;
+}
