@@ -82,6 +82,9 @@ export function TheForm({f1,f2}){
             <form>
                 <label htmlFor="titleSearchString">Filtro de Título</label>
                 <input id="titleSearchString" name="titleSearchString" type="text" autoComplete="true" onFocus={f1} onChange={f2}/>
+
+                <label htmlFor="DataSearchString">Data</label>
+                <input id="DataSearchString" name="DataSearchString" type="text" autoComplete="true" onFocus={f1} onChange={f2}/>
             </form>
         </div>
     )

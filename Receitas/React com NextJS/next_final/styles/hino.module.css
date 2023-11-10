@@ -1,0 +1,17 @@
+.hino{
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.viva{
+    background-color: gray;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.autor{
+    text-align: end;
+}
