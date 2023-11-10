@@ -11,24 +11,6 @@ export default function Nav(){
             <li className={styles.li}>
                 <Link className={styles.link} href='https://next-receita-1.vercel.app/'>Receita 1</Link>
             </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='https://next-receita-2.vercel.app/'>Receita 2</Link>
-            </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='https://next-receita-3.vercel.app/'>Receita 3</Link>
-            </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='https://next-receita-4.vercel.app/'>Receita 4</Link>
-            </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='https://next-receita-5.vercel.app/'>Receita 5</Link>
-            </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='https://next-receita-6.vercel.app/'>Receita 6</Link>
-            </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='https://next-receita-9.vercel.app/'>Receita 9</Link>
-            </li>
         </ul>
     )
 }
