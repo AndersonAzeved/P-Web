@@ -1,13 +1,13 @@
 .forms{
     border-radius: 25px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
     position: relative;
     background-color: black;
     margin-top: 20px;
     border-radius: 25px;
     color: white;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
 }
 
