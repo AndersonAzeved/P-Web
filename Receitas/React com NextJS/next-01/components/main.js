@@ -5,7 +5,6 @@ import styles from '../styles/main.module.css'
 export default function Main({children}){
     return (
         <>  
-            <title>Receita 1</title>
             <Nav/>
             <div className={styles.main}><div>{children}</div></div>
             <Footer/>
