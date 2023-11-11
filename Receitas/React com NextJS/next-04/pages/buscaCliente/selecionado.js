@@ -11,7 +11,7 @@ export default function Selecionado(){
     const idFilme = router.query.idFilme
     const array = []
 
-    const {data, error} = useSWR(`http://www.omdbapi.com/?apikey=31c8f11c&i=${idFilme}`, fetcher)
+    const {data, error} = useSWR(`https://www.omdbapi.com/?apikey=31c8f11c&i=${idFilme}`, fetcher)
     
     if (error) return <div>falha na requisição...</div>
     if (!data) return (<div className={spin.divSpinner}><Spin size='large'/></div>)
