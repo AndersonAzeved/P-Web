@@ -1,7 +1,9 @@
-import { Nav, Erro } from "./movies"
+import { Erro } from "./movies"
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
-import styles from '../styles/selecionado.module.css'
+import styles from '../../styles/selecionado.module.css'
+import spin from '../../styles/spin.module.css'
+import { Spin } from 'antd';
 
 
 export default function Selecionado(){
@@ -12,7 +14,7 @@ export default function Selecionado(){
     const {data, error} = useSWR(`http://www.omdbapi.com/?apikey=31c8f11c&i=${idFilme}`, fetcher)
     
     if (error) return <div>falha na requisição...</div>
-    if (!data) return <div>carregando...</div>
+    if (!data) return (<div className={spin.divSpinner}><Spin size='large'/></div>)
 
     if(data.Response == 'False' || data == undefined){
         return(<Erro/>)
@@ -20,8 +22,6 @@ export default function Selecionado(){
         array.push(data)
         return(
             <>
-                <Nav/>
-
                 {array?.map((m) => (
                     <div className={styles.div}>
                         <div className={styles.imgPoster}>

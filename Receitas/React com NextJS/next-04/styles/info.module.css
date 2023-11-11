@@ -2,18 +2,28 @@
     position: relative;
     background-color: black;
     text-align: center;
-    margin-left: 150px;
-    margin-right: 150px;
     border-radius: 25px;
     color: white;
     columns: 2;
+    padding: 20px;
 }
 
 .titulo{
-    text-decoration: underline black;
+    color: white;
     text-align: center;
+    background-color: gray;
+    border-radius: 15px;
 }
 
 .info h1{
-    text-decoration: underline white;;
+    font-size: 30px;
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.info p{
+    text-align: start;
+    margin-top: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
 }

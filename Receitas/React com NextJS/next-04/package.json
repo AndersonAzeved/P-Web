@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "antd": "^5.11.1",
+    "bootstrap": "^5.3.2",
     "next": "^13.4.19",
     "swr": "^2.2.2"
   }

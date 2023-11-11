@@ -50,6 +50,7 @@
     background-color: black;
     border-radius: 15px;
     position: relative;
+    margin-top: 10px;
 }
 
 .imgPoster{
@@ -67,7 +68,7 @@
     font-family: 'Copperplate', Copperplate Gothic Light, fantasy;
     font-size: 20px;
     text-align: right;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-right: 15%;
     margin-left: 10%
 }
@@ -95,25 +96,3 @@
     size: 20px;
     margin-top: 60px;
 }
-
-
-/*
-.galeria{
-    column-gap: 0;
-    column-count: 3;
-}
-
-.poster{
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-
-    transition: scale 350ms ease; opacity: 350ms linear;
-}
-
-.galeria:has(.poster:hover) .poster:not(:hover){
-    scale: .9;
-    opacity: .7;
-}
-
-*/

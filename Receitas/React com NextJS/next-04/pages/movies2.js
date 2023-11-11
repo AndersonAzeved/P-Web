@@ -16,19 +16,3 @@ async function fetcher(url){
     const json = await res.json()
     return json
 }
-
-
-// Condicional para quando o data for undefined
-/*
-if(data.Response == 'False'){
-        return(
-            <div>-------------------------Deu merdaaaaaaaaaa</div>
-        )
-}else{
-    return(
-        <div>
-            {data.Search.map((m) => <div>{m.Title} ----- {m.Year}</div>)}
-        </div>
-    )
-}
-*/

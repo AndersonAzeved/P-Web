@@ -1,8 +1,10 @@
-import { Nav, Erro } from "./movies"
+import { Erro } from "../buscaCliente/movies"
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
-import styles from '../styles/selecionado.module.css'
+import styles from '../../styles/selecionado.module.css'
+import spin from '../../styles/spin.module.css'
 import { useState, useEffect } from 'react';
+import { Spin } from 'antd';
 
 
 export default function Selecionado(){
@@ -26,7 +28,7 @@ export default function Selecionado(){
         
 
     console.log('Estamos no selecionadoServer')
-    if (!data) return <div>carregando...</div>
+    if (!data) return (<div className={spin.divSpinner}><Spin size='large'/></div>)
 
     if(data.Response == 'False' || data == undefined){
         return(<Erro/>)
@@ -34,8 +36,6 @@ export default function Selecionado(){
         array.push(data)
         return(
             <>
-                <Nav/>
-
                 {array?.map((m) => (
                     <div className={styles.div}>
                         <div className={styles.imgPoster}>
@@ -79,16 +79,3 @@ async function fetcher(url){
     const json = await res.json()
     return json
 }
-
-/*
-
-    function carregarPromessas(api,div_nome,json,cabecalho,propriedade,titulo){
-        fetch(api).then(
-            res => res.json()
-        ).then( 
-            json => carregarDiv(div_nome,json,cabecalho,propriedade,titulo)
-        ).catch(
-            err => document.getElementById(div_nome).innerHTML = `Fudeu... ${err}`
-        )
-        document.getElementById(div_nome).innerHTML = `Fazendo requisição`          
-    }*/

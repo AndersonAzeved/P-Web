@@ -1,4 +1,3 @@
-import { Nav } from "./movies"
 import styles from '../styles/info.module.css'
 import useSWR from 'swr'
 
@@ -9,7 +8,6 @@ export default function Info(){
 
     return (
         <>
-            <Nav/>
             <h1 className={styles.titulo}>Informações do Cliente</h1>
             <div className={styles.info}>
                 <div>
