@@ -16,7 +16,7 @@ export default function Selecionado(){
     const [carrega, setCarrega] = useState(false)
 
     const load =  async (idFilme) => {
-        const res = await fetch(`http://www.omdbapi.com/?apikey=31c8f11c&i=${idFilme}`)
+        const res = await fetch(`https://www.omdbapi.com/?apikey=31c8f11c&i=${idFilme}`)
         const json = await res.json()
         setData(json)
         setCarrega(true)

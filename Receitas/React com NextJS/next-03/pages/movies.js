@@ -17,7 +17,7 @@ export default function MinhaPagina() {
             setFezBusca(0)
             if(exibir == 'true'){
                 try {
-                    const response = await fetch(`http://www.omdbapi.com/?apikey=31c8f11c&s=${busca}`)
+                    const response = await fetch(`https://www.omdbapi.com/?apikey=31c8f11c&s=${busca}`)
                     const data = await response.json()
                     setData(data)
                     setFezBusca(1)
@@ -26,7 +26,7 @@ export default function MinhaPagina() {
                 }
             }else{
                 try {
-                    const response = await fetch(`http://www.omdbapi.com/?apikey=31c8f11c&t=${busca}&y=${ano}`)
+                    const response = await fetch(`https://www.omdbapi.com/?apikey=31c8f11c&t=${busca}&y=${ano}`)
                     const data = await response.json()
                     setArray([data])
                     setFezBusca(1)

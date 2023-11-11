@@ -31,7 +31,7 @@ export default function MinhaPagina() {
     
     
     if(exibir == 'true'){
-        const {data, error} = useSWR(`http://www.omdbapi.com/?apikey=31c8f11c&s=${busca}`, fetcher)
+        const {data, error} = useSWR(`https://www.omdbapi.com/?apikey=31c8f11c&s=${busca}`, fetcher)
         if (error) return <div>falha na requisição...</div>
         if (!data) return (<div className={spin.divSpinner}><Spin size='large'/></div>)
         
@@ -62,7 +62,7 @@ export default function MinhaPagina() {
 
         
     }else{
-        const {data, error} = useSWR(`http://www.omdbapi.com/?apikey=31c8f11c&t=${busca}&y=${ano}`, fetcher)
+        const {data, error} = useSWR(`https://www.omdbapi.com/?apikey=31c8f11c&t=${busca}&y=${ano}`, fetcher)
         if (error) return <div>falha na requisição...</div>
         if (!data) return (<div className={spin.divSpinner}><Spin size='large'/></div>)
         array.push(data)

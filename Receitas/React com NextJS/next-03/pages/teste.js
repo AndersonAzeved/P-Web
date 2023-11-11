@@ -14,7 +14,7 @@ export default function MinhaPagina() {
     useEffect(() => {
         async function fetchDataTrue(busca,ano,exibir) {
             try {
-                const response = await fetch(`http://www.omdbapi.com/?apikey=31c8f11c&s=${busca}`)
+                const response = await fetch(`https://www.omdbapi.com/?apikey=31c8f11c&s=${busca}`)
                 const data = await response.json()
                 setData(data)
             } catch (error) {
@@ -24,7 +24,7 @@ export default function MinhaPagina() {
 
         async function fetchDataFalse(busca,ano,exibir){
             try {
-                const response = await fetch(`http://www.omdbapi.com/?apikey=31c8f11c&t=${busca}&y=${ano}`)
+                const response = await fetch(`https://www.omdbapi.com/?apikey=31c8f11c&t=${busca}&y=${ano}`)
                 const data = await response.json()
                 setArrayData([data])
             } catch (error) {
