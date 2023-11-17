@@ -8,9 +8,6 @@ export default function Nav(){
             <li className={styles.li}>
                 <Link className={styles.link} href='/'>Home</Link>
             </li>
-            <li className={styles.li}>
-                <Link className={styles.link} href='../searchmovies/busca'>Buscar</Link>
-            </li>
         </ul>
     )
 }

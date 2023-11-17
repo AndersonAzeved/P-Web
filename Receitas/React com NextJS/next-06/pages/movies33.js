@@ -57,16 +57,7 @@ export default function Movies33(){
     }
     //<TheLink url={state.url} handler={onClickHandler} />
     return (
-        <div>
-            <title>Movies</title>
-            <form>
-                <input type='radio' id='filme' name='drone' checked onChange={() => setRadio(1)}/>
-                <label htmlFor='filme'>Filme</label>
-
-                <input type='radio' id='serie' name='drone' onChange={() => setRadio(2)}/> 
-                <label htmlFor='serie'>Serie</label>               
-            </form>
-            {botaoRadio == 1 ? console.log('É 1') : console.log('É 2')}
+        <div>            
             <TheForm f1={onFocus} f2={onEnter}/>
             
             <div id='info'></div>
@@ -82,9 +73,6 @@ export function TheForm({f1,f2}){
             <form>
                 <label htmlFor="titleSearchString">Filtro de Título</label>
                 <input id="titleSearchString" name="titleSearchString" type="text" autoComplete="true" onFocus={f1} onChange={f2}/>
-
-                <label htmlFor="DataSearchString">Data</label>
-                <input id="DataSearchString" name="DataSearchString" type="text" autoComplete="true" onFocus={f1} onChange={f2}/>
             </form>
         </div>
     )
