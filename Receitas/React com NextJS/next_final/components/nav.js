@@ -6,7 +6,7 @@ export default function Nav(){
     return (
         <ul className={styles.ul}>
             <li className={styles.li}>
-                <Link target="_blank" className={styles.link} href='https://receitas-next-anderson.vercel.app/'>Home</Link>
+                <Link className={styles.link} href='https://receitas-next-anderson.vercel.app/'>Home</Link>
             </li>
             <li className={styles.li}>
                 <Link target="_blank" className={styles.link} href='https://next-receita-1.vercel.app/'>Receita 1</Link>
