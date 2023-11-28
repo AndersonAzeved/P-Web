@@ -5,7 +5,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps}){
     return (
         <Main>
-            <title>Receita 1</title>
+            <title>Receitas Next</title>
             <Component {...pageProps} />
         </Main>
     )
