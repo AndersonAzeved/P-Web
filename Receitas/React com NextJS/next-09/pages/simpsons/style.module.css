@@ -1,0 +1,23 @@
+.card{
+    background-color: rgb(230, 210, 37);
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card img{
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.erro{
+    background-color: rgb(230, 210, 37);
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
